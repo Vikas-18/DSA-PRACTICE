@@ -17,11 +17,11 @@ public class combinationsum {
             if(sum==target)
             {
                 System.out.println(ans);
-                return;
+                
             }
-            else{
+            
                 return;
-            }
+            
         }
 
         ans.add(arr[idx]);
