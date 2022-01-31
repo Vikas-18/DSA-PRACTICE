@@ -4,8 +4,8 @@ import java.util.*;
 public class subsetsum {
     
     public static void main(String[] args) {
-        int[][] arr= {{1,2,3},{3,2,1}};
-        System.out.println(maximumWealth(arr));
+        int[]arr={1,2,2,5,3,5};
+        System.out.println(thirdMax(arr));
         
     }
 
@@ -63,5 +63,27 @@ public class subsetsum {
             }
         }
         return maxsum;
+    }
+     static int thirdMax(int[] nums) {
+         Arrays.sort(nums);
+        int counter=1;
+        int maximum=-3121211;
+        
+        for(int i=nums.length-1; i>=0; i--)
+        {
+            if(i>0 && nums[i]>nums[i-1])
+            counter++;
+            if(counter==3)
+            {
+                return nums[i-1];
+            }
+        }
+       
+        if(nums.length<3 || counter<3)
+        {
+            return nums[nums.length-1];
+        }
+       return -1;
+            
     }
 }
