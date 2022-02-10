@@ -6,7 +6,6 @@ public class subsetsum {
     public static void main(String[] args) {
         int[]arr={1,2,2,5,3,5};
         System.out.println(thirdMax(arr));
-        System.out.println(thirdMax(arr));
         
         
     }
