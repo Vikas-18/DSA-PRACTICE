@@ -1,1 +1,1 @@
-insum=sum;
+  st.pop();

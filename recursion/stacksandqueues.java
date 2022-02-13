@@ -5,35 +5,52 @@ public class stacksandqueues {
         st.push(4);
         st.push(3);
         st.push(2);
-        st.print();
+        st.pop();
+    int top =    st.top();
+    System.err.println(top);
+      
 
     }
 
    static class stacks{
-       static int size = 5;
-    static int [] arr = new int[5];
-   static int data;
-    static int top = -1;
+       static  int size = 5;
+      static int [] arr = new int[5];
+      static int data;
+    static   int top = -1;
 
-    static  stacks()
+stacks()
+{
+    this.size=size;
+    this.data=data;
+}
+      stacks(int data)
     {
-        this.size = size;
+       this.data=data;
         
     }
 
-     static void push(int data)
+ static void push(int data)
      {
+         if(top!=5)
+         {
          top++;
          arr[top]=data;
+         }
+     }
+ static int top()
+     {
+        return arr[top];
      }
 
-static void print()
+
+static void pop()
 {
-    int i=0;
-     while (i<=top) {
-         System.out.println(arr[i]);
-         
-     }
+    if(top!=-1)
+    {
+        
+        top--;
+
+    }
 }
 
 
