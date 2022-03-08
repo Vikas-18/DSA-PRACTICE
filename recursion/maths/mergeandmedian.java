@@ -11,18 +11,19 @@ public class mergeandmedian {
     public static void main(String[] args) {
         List<Integer> arr1 = new ArrayList<>();
        //[1,2,3] [4,5,6]
+       arr1.add(1);
+       arr1.add(2);
+     
         List<Integer> arr2 = new ArrayList<>();
-        arr2.add(4);
+        arr2.add(-1);
+        arr2.add(2);
         
     
         merge(arr1, arr2);
-        System.out.println(arr);
-         Double obj = Double.valueOf(arr.get(0));
+        System.out.println(arr1);
+       
 
-        if(arr.size()==1)
-        {
-            System.out.println(obj);
-        }
+      
         
         
     }
@@ -56,6 +57,11 @@ public class mergeandmedian {
         {
             arr.add(arr2.get(j));
             j++;
+        }
+        arr1.clear();
+         for(int k=0; k<arr.size(); k++)
+        {
+            arr1.add(k, arr.get(k)); 
         }
     }
 }
