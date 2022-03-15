@@ -1,4 +1,4 @@
-package maths;
+
 import java.util.*;
 public class triplets {
     public static void main(String[] args) {

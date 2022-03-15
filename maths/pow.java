@@ -1,4 +1,4 @@
-package maths;
+
 
 public class pow {
 

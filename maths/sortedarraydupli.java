@@ -1,4 +1,4 @@
-package maths;
+
 import java.util.*;
 
 public class sortedarraydupli {

@@ -1,4 +1,4 @@
-package maths;
+
 
 public class trailingzetos {
     public static void main(String[] args) {
