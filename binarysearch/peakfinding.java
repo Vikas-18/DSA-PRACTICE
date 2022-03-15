@@ -1,4 +1,4 @@
-package binarysearch;
+
 import java.util.*;
 public class peakfinding {
     public static void main(String[] args) {

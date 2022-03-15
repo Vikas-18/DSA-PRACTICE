@@ -1,9 +1,10 @@
 {
   "java.project.sourcePaths": [
     "stacks",
+    "sorting",
     "recursion",
     "maths",
     "OOPS",
-    "sorting"
+    "binarysearch"
   ]
 }
