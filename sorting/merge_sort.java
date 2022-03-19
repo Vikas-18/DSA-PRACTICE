@@ -1,62 +1,75 @@
 public class merge_sort {
     public static void main(String[] args) {
+        int[] arr = {6,7,4,5,3};
+        int length = 5;
 
-        int[] arr = {1,2,};
-      
-        for (int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i]);
+        System.out.println("Before Sorting");
+
+        for(int i = 0; i < length; i++){
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+        mergeSort(arr , 0 , length - 1);
+        System.out.println("After Sorting");
+        for(int i = 0; i < length; i++){
+            System.out.print(arr[i] + " ");
         }
     }
 
-    static void mergesort(int[] arr,int s,int e)
-    {
-        if(s>=e)
-        {
+    public static void mergeSort(int[] arr , int s , int e){
+        //base case
+        if(s >= e)
             return;
-        }
-        int mid = s+e/2;
-        
 
-        mergesort(arr, s, mid);
-        mergesort(arr, mid+1, e);
-
-        int[] ans = new int[arr.length];
-
-        ans = merge(arr,s,e);
-       
-        
+        int mid = (s + e)/2;
+        //left Part
+        mergeSort(arr , s , mid);
+        //right part
+        mergeSort(arr , mid + 1 , e);
+        merge(arr , s , e);
     }
 
-    static int[] merge(int[] arr,int s,int e)
-    {
-        int mid = s+e/2;
-      int len1 = mid-s+1;
-      int len2 = e-mid;
+    public static void merge(int[] arr , int s , int e){
 
-      int[] arr1 = new int[len1];
-      int[] arr2 = new int[len2];
+        int mid = (s + e)/2;
+        int len1 = mid - s + 1; //length of first half
+        int len2 = e - mid; //length of second half
+        int[] arr1 = new int[len1];
+        int[] arr2 = new int[len2];
 
-      int k=s;
-      for (int i = 0; i <len1; i++) {
-          arr1[i]=arr[k];
-          k++;
-      }
-      k=mid+1;
-      for (int i = 0; i < len2; i++) {
-          arr2[i] = arr[k];
-          k++;
-      }
+        //copy elements in these arrays;
+        int originalArrayIndex = s;
+        for(int i = 0; i < len1; i++){
+            arr1[i] = arr[originalArrayIndex++];
+        }
 
-      int i=0;
-      int j=0;
-      k=0;
+       originalArrayIndex = mid + 1;
 
-      while(i<len1 && j<len2)
-      {
-          if(arr1[i]<arr2[j])
-          {
-              
-          }
-      }
+        for(int i = 0; i < len2; i++){
+            arr2[i] = arr[originalArrayIndex++];
+        }
+
+        //merge two sorted arrays;
+        originalArrayIndex = s;
+
+        int idx1 = 0;
+        int idx2 = 0;
+        while(idx1 < len1 && idx2 < len2){
+            if(arr1[idx1] < arr2[idx2]){
+                arr[originalArrayIndex++] = arr1[idx1++];
+            }
+            else {
+                arr[originalArrayIndex++] = arr2[idx2++];
+            }
+        }
+
+        //if in arr1 elements are remaining
+        while(idx1 < len1){
+            arr[originalArrayIndex++] = arr1[idx1++];
+        }
+        //if in arr2 elements are remaining
+        while(idx2 < len2){
+            arr[originalArrayIndex++] = arr2[idx2++];
+        }
     }
 }
