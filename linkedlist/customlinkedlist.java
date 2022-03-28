@@ -2,7 +2,7 @@
 public class customlinkedlist {
     public static void main(String[] args) {
         customlinkedlist ll1 = new customlinkedlist();
-        
+
     }
 
     private Node head;
@@ -73,7 +73,7 @@ public class customlinkedlist {
         }
         System.out.println();
     }
-//adjacent swap nodes
+//adjacent swap nodes, use recursion 
      public Node swapPairs(Node head) {
         if(head==null)
         {
@@ -118,7 +118,7 @@ public class customlinkedlist {
        
       
     }
-//add two numbers 2
+//add two numbers 2 represented as linked list
 public Node addTwoNumbers(Node l1, Node l2) {
         Node ll1 = reverse(l1);
         Node ll2 = reverse(l2);
@@ -185,7 +185,9 @@ public Node addTwoNumbers(Node l1, Node l2) {
         }
         return prev;
     }
-    
+    //first find mid then set a pointer at mid and another pointer at start then recreate the list
+
+    //reorder list medium
       public Node reorderList(Node head) {
          if(head==null || head.next==null)
         {

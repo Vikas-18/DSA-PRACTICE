@@ -1,5 +1,3 @@
-import javax.swing.plaf.synth.SynthOptionPaneUI;
-
 class Bank{
     String name;
 
