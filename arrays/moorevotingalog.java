@@ -30,7 +30,7 @@ public class moorevotingalog {
         for (int i = 1; i < arr.length; i++) {
             if(arr[i]==val)
             {
-                count++;
+                count++;//same element found
             }
             else{
                 count--;//found distinct element so pair it;
