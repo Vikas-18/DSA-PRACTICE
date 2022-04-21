@@ -1,6 +1,7 @@
 public class bubble_sort {
 
     public static void main(String[] args) {
+        //worst case: O(n*n) best case:O(n); 
         int [] arr = {0,1,3,1,3,-2}; 
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr.length-i-1; j++) {
