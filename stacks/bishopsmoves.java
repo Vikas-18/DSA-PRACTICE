@@ -1,6 +1,6 @@
 public class bishopsmoves {
     public static void main(String[] args) {
-        System.out.println(isPower(4));
+        System.out.println(solve(8, 8));
     }
      static  int solve(int A, int B) {
          int tempA=A;
@@ -37,23 +37,5 @@ public class bishopsmoves {
             B++;
         }
         return count;
-    }
-     static int isPower(int A) {
-         
-        if(A==4)
-        {
-            return 1;
-        }
-int ans =0;
-        if(A%2==0)
-        {
-            A=A/2;
-             ans = isPower(A);
-
-        }
-     
-
-        return ans;
-      
     }
 }
