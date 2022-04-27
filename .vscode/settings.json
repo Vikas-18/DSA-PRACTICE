@@ -1,13 +1,13 @@
 {
   "java.project.sourcePaths": [
+    "string-DS",
     "stacks",
     "sorting",
     "recursion",
     "maths",
     "linkedlist",
-    "hash_maps",
     "binarysearch",
     "OOPS",
-    "string-DS"
+    "dynamic programing"
   ]
 }

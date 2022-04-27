@@ -3,10 +3,10 @@ import java.util.*;
 
 public class leetcodecombiantionsum {
     public static void main(String[] args) {
-        int[] arr={2,3,6,7};
+        int[] arr={7,2,6,5 };
         ArrayList<Integer> ans = new ArrayList<>();
         ArrayList<ArrayList<Integer>> list = new ArrayList<>();
-        combination(0, 7, arr, ans,list);
+        combination(0, 16, arr, ans,list);
         System.out.println(list);
     }
 

@@ -9,14 +9,14 @@ public class combinationsum {
         ArrayList<Integer> ans = new ArrayList<>();
         csum(0, arr, 3, 0, ans);
     }
-
+public static ArrayList<ArrayList<Integer>> list = new ArrayList<>();
     static void csum(int idx,int[] arr,int target,int sum,ArrayList<Integer> ans)
     {
         if(idx>=arr.length)
         {
             if(sum==target)
             {
-                System.out.println(ans);
+               list.add(new ArrayList<>(ans));
                 
             }
             
