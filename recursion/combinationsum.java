@@ -8,8 +8,10 @@ public class combinationsum {
         int[] arr={1,2,3};
         ArrayList<Integer> ans = new ArrayList<>();
         csum(0, arr, 3, 0, ans);
+        System.out.println(list);
     }
 public static ArrayList<ArrayList<Integer>> list = new ArrayList<>();
+
     static void csum(int idx,int[] arr,int target,int sum,ArrayList<Integer> ans)
     {
         if(idx>=arr.length)
@@ -17,7 +19,6 @@ public static ArrayList<ArrayList<Integer>> list = new ArrayList<>();
             if(sum==target)
             {
                list.add(new ArrayList<>(ans));
-                
             }
             
                 return;
