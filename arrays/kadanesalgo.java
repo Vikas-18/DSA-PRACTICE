@@ -10,7 +10,7 @@ public class kadanesalgo {
         
         for(int i=1; i<arr.length; i++)
         {
-            if(csum>=0)//add arr[i] only when csum is positive/0
+            if(csum>=0)//add arr[i] only when csum is positive or 0
             {
                 csum+=arr[i];
             }
