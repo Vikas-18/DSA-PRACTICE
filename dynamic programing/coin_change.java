@@ -1,13 +1,13 @@
 public class coin_change {
     public static void main(String[] args) {
         int[] arr = {1,2,5};
-       int[][] dp = new int[3][12];
+       int[][] dp = new int[3][6];
        for (int i = 0; i < dp.length; i++) {
           for (int j = 0; j < dp[0].length; j++) {
              dp[i][j] =-1;
           }
        }
-        System.out.println(solve2(arr, 11, 2,dp) );
+        System.out.println(solve3(arr, 5, 2,dp) );
     }
     static   int res = Integer.MAX_VALUE;
     public static  void solve(int[] arr,int target,int idx,int ans)
@@ -63,6 +63,36 @@ public class coin_change {
        int notpick =  solve2(arr,target,idx-1,dp);
 
       dp[idx][target] =  Math.min(notpick,pick);
+      return dp[idx][target];
+        
+    }
+//coin change 2 ways problem
+    public static  int solve3(int[] arr,int target,int idx,int[][] dp)
+    {
+       //base case
+        if(idx==0)
+        {
+            if(target%arr[0]==0)//always think of the base case as single element
+            {
+               return 1;
+            }
+           return 0;
+        }
+        
+        if(dp[idx][target]!=-1)
+        return dp[idx][target];
+        
+        //pick
+        int pick =0;
+        if(target>=arr[idx] ) 
+            pick = solve3(arr,target-arr[idx],idx,dp);
+            
+        
+        
+        //not pick
+       int notpick =  solve3(arr,target,idx-1,dp);
+
+      dp[idx][target] =  notpick+pick;
       return dp[idx][target];
         
     }
