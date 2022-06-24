@@ -1,43 +1,35 @@
 import java.util.ArrayList;
+import java.util.Currency;
 
 public class cut_rods {
     public static void main(String[] args) {
-        int[] arr = {1,2,3};
-        
-        ArrayList<Integer> list = new ArrayList<>();
-        ArrayList<ArrayList<Integer>> ans  = new ArrayList<>();
-        solve(arr, 7, 0, 0, list, ans);
-        System.out.println(res);
-        
-
-    }
-    public static int res = 0;
-    public static void solve(int[] arr,int target,int sum,int idx,ArrayList<Integer> list,ArrayList<ArrayList<Integer>> ans)
-    {
-        //base case
-        if(idx>=arr.length)
-        {
-           
-            if(target==0)
-            {
-                res = Math.max(res,list.size());
-                ans.add(new ArrayList<>(list));
-            }
-            return;
+        int n= 5;
+        int[] price = {2 ,5 ,7 ,8 ,10};
+        int[][] dp = new int[price.length+1][n+1];
+        for (int i = 0; i < dp.length; i++) {
+           for (int j = 0; j < dp[0].length; j++) {
+              dp[i][j] =-1;
+           }
         }
+        System.out.println(cutRodUtil(price, n-1, n, dp));
+    }
 
-       
-        if(target>=arr[idx])
-        {
-            list.add(arr[idx]);
-            solve(arr, target-arr[idx], sum, idx,list,ans);
-            list.remove(list.size()-1);
+    static int cutRodUtil(int[] price, int ind, int N,int[][] dp){
+
+        if(ind == 0){
+            return N*price[0];
         }
         
-        solve(arr, target, sum, idx+1,list,ans);
-
+        if(dp[ind][N]!=-1)
+            return dp[ind][N];
+            
+        int notTaken = 0 + cutRodUtil(price,ind-1,N,dp);
         
-    }
-    
-    
+        int taken = Integer.MIN_VALUE;
+        int rodLength = ind+1;
+        if(rodLength <= N)
+            taken = price[ind] + cutRodUtil(price,ind,N-rodLength,dp);
+            
+        return dp[ind][N] = Math.max(notTaken,taken);
+    }    
 }
