@@ -7,12 +7,12 @@ class Shape{
     }
 }
 
-class Triangle extends Shape{
+class Triangle1 extends Shape{
 
 }
 public class inheritance {
    public static void main(String[] args) {
-        Triangle t1 = new Triangle();
+        Triangle1 t1 = new Triangle1();
         t1.color = "red";
         t1.display(); 
    }
