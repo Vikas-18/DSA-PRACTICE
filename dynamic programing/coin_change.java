@@ -72,7 +72,8 @@ public class coin_change {
        //base case
         if(idx==0)
         {
-            if(target%arr[0]==0)//always think of the base case as single element
+            if(target%arr[0]==0)
+            //always think of the base case as single element GOLDEN STATEMENT
             {
                return 1;
             }

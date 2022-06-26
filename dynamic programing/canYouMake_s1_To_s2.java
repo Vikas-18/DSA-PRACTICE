@@ -1,5 +1,6 @@
 public class canYouMake_s1_To_s2 {
     public static void main(String[] args) {
+        //only deletions ans insertions are allowed
         String s1 = "abs";
         String s2 = "ab";
         int ans = solve2(s1, s2);
@@ -8,7 +9,7 @@ public class canYouMake_s1_To_s2 {
         int res =  ans1+ans2;
         System.out.println(res);
     }
-    // we can always make s1 to s2 by deleting all the char and inserting only s2 char intuition behind this approach is that keeping longest common subsequence and just getting ans for char which need to be deleted and inserted 
+    // we can always make s1 to s2 by deleting all the char and inserting only s2 char intuition behind this approach is that keeping longest common subsequence and just getting ans for char which need to be deleted and then inserted,so that both the strings are equal 
     public static int solve2(String s1,String s2)
     {
         int n=s1.length();
