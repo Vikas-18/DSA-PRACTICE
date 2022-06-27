@@ -1,4 +1,3 @@
-import java.util.*;
 public class stacksandqueues {
     public static void main(String[] args) {
         stacks st = new stacks();

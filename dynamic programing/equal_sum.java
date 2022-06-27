@@ -1,4 +1,4 @@
-import java.util.Arrays;
+
 public class equal_sum {
     public static void main(String[] args) {
         int[] arr = {1,5,11,5};

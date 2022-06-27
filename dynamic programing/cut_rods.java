@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.Currency;
-
 public class cut_rods {
     public static void main(String[] args) {
         int n= 5;

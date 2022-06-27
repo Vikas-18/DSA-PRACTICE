@@ -7,7 +7,7 @@ public class min_path_sum {
                 dp[index][i] = -1;
             }
         }
-        // System.out.println(solve(arr, 2, 2, dp));
+        System.out.println(solve(arr, 2, 2, dp));
         System.out.println(tabulation(arr));
     }
 
