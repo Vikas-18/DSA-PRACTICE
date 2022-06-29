@@ -1,7 +1,8 @@
+
 public class search2d {
     public static void main(String[] args) {
-        int[][] arr = {{1,2,3},{4,5,6},{7,8,9}};
-        System.out.println(binarysearchMatrix(arr, 5));
+        int[]arr = {4,5,6,7,0,1,2};
+        System.out.println(solve(arr, 4));
     }
    static boolean searchMatrix(int[][] matrix, int target) {
         int r = 0;
@@ -67,5 +68,5 @@ else if(matrix[mid][0]<=target && matrix[mid][matrix[0].length-1]<=target)
             }
         }
         return false;
-    }
+    } 
 }
