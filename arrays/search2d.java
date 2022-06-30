@@ -1,8 +1,8 @@
 
 public class search2d {
     public static void main(String[] args) {
-        int[]arr = {4,5,6,7,0,1,2};
-        System.out.println(solve(arr, 4));
+        int[][]arr = {{4,5,6},{7,0,1},{2}};
+        System.out.println(searchMatrix(arr, 5));
     }
    static boolean searchMatrix(int[][] matrix, int target) {
         int r = 0;
