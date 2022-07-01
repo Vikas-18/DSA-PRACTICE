@@ -1,3 +1,5 @@
+package arrays;
+
 
 public class search2d {
     public static void main(String[] args) {

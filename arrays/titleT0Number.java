@@ -1,3 +1,5 @@
+package arrays;
+
 public class titleT0Number {
     public static void main(String[] args) {
         //A->65
@@ -6,7 +8,7 @@ public class titleT0Number {
        
     }
 
-    public static  String[]arr = {"#","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
+ 
     public static  int solve(String s)
     {
         double ans = 0;

@@ -1,4 +1,4 @@
-public class perfectsquare {
+public class perfectsquareleetcode {
     public static void main(String[] args) {
         
     }

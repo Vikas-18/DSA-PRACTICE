@@ -1,3 +1,5 @@
+package arrays;
+
 public class productofarray {
     public static void main(String[] args) {
         

@@ -1,3 +1,5 @@
+package arrays;
+
 public class spiral2matrix {
     public static void main(String[] args) {
         int[][] ans = generateMatrix(3);

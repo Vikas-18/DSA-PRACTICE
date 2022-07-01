@@ -17,11 +17,8 @@ public class wildcardMatching {
         {
             return true;
         }
-        if(i<=0 && j>0)
-        {
-            return false;
-        }
-        if((i>=0 && j<0))
+        
+        if(i<0 || j<0)
         {
             return false;
         }

@@ -1,3 +1,5 @@
+package arrays;
+
 import java.util.Arrays;
 
 public class median_2darr {

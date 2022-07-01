@@ -1,3 +1,5 @@
+package binarytrees;
+
 
 import java.util.*;
 public class buildtree {
