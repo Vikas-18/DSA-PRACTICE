@@ -1,3 +1,4 @@
+package BUY_SELL_STOCKS;
 public class buy_sell_stocks_3 {
     public static void main(String[] args) {
         int [] prices = {7,1,5,4,6};

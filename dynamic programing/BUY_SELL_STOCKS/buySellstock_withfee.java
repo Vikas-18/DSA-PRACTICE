@@ -1,3 +1,4 @@
+package BUY_SELL_STOCKS;
 public class buySellstock_withfee {
     public static void main(String[] args) {
         int[] prices = {1,3,2,8,4,9};

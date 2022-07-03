@@ -1,3 +1,4 @@
+package PARTITION_DP;
 public class burstballons {
     public static void main(String[] args) {
         int[] burst = {3,1,5,8};

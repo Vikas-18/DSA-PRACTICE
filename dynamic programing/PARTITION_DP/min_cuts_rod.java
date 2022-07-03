@@ -1,3 +1,4 @@
+package PARTITION_DP;
 import java.util.Arrays;
 
 public class min_cuts_rod {

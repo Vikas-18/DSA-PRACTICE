@@ -1,15 +1,8 @@
-/**
- * longestpalindromicsubstring
- */
-public class longestpalindromicsubstring {
-
+package DP_ON_STRING;
+public class longestcommonsubstring {
     public static void main(String[] args) {
-        String s = "babad";
-        String s1 = s;
-        String s2 = new String();
-        for (int i = s.length()-1; i >= 0; i--) {
-            s2 += s.charAt(i);
-        }
+        String s1= "abcdefg";
+        String s2 = "cdabcd";
         System.out.println(solve2(s1, s2));
     }
     public static int solve2(String s1,String s2)
@@ -42,7 +35,7 @@ public class longestpalindromicsubstring {
                 ans = Math.max(dp[ind1][ind2],ans);
             }
             else
-                dp[ind1][ind2] = 0;
+                dp[ind1][ind2] = 0;// since its value doesnot depends upon previous 2 values 
             
         }
     }
