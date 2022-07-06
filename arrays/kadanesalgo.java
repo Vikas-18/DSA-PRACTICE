@@ -1,4 +1,3 @@
-package arrays;
 
 public class kadanesalgo {
     public static void main(String[] args) {

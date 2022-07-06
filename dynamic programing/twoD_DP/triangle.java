@@ -2,6 +2,7 @@
  * triangle
  */
 
+package twoD_DP;
 public class triangle {
 
     public static void main(String[] args) {

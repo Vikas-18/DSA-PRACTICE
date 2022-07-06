@@ -1,6 +1,7 @@
 /**
  * unboundedknapsack
  */
+package twoD_DP;
 public class unboundedknapsack {
 
     public static void main(String[] args) {

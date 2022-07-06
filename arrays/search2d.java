@@ -1,4 +1,4 @@
-package arrays;
+
 
 
 public class search2d {

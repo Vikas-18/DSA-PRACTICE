@@ -1,4 +1,3 @@
-package arrays;
 
 public class rotate2darr {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package arrays;
+
 
 import java.util.*;
 public class first_repeating_element {

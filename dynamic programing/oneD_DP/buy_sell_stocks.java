@@ -1,3 +1,5 @@
+package oneD_DP;
+
 public class buy_sell_stocks {
     public static void main(String[] args) {
         int[] prices = {7,1,5,4,6};

@@ -1,3 +1,4 @@
+package oneD_DP;
 public class min_climbStairs {
     public static void main(String[] args) {
         int[] cost = {10,15,20};

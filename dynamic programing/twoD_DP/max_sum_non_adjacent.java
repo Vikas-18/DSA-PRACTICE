@@ -1,3 +1,4 @@
+package twoD_DP;
 public class max_sum_non_adjacent {
     public static void main(String[] args) {
         int[] arr = {1,3,2,6,5};

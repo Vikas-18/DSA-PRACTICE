@@ -1,3 +1,4 @@
+package twoD_DP;
 public class knapsack_zero_one {
     public static void main(String[] args) {
         int[] wt= {1,2,4,5};

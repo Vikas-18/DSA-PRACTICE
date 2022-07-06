@@ -1,4 +1,4 @@
-package arrays;
+
 import java.util.*;
 public class longestCommon_subsequence {
     public static void main(String[] args) {

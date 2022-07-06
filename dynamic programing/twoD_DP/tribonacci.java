@@ -1,3 +1,4 @@
+package twoD_DP;
 public class tribonacci {
     public static void main(String[] args) {
         int n= 25;

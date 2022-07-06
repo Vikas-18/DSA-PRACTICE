@@ -1,29 +1,21 @@
 
-public class equal_sum {
+package twoD_DP;
+public class targetSum {
     public static void main(String[] args) {
-        int[] arr = {1,5,11,5};
-        int target = 0;
-        for(int i=0; i<arr.length; i++)
-        {
-            target += arr[i];
+        int[] arr = {68, 35, 1, 70, 25, 79, 59, 63, 65, 6, 46 };
+        int[][] dp = new int[arr.length+1][100000];
+        for (int i = 0; i < dp.length; i++) {
+            for (int j = 0; j < dp[0].length; j++) {
+                dp[i][j] = -1;
+            }
         }
-       int[][] dp = new int[arr.length+1][target+1];
-       for (int i = 0; i < dp.length; i++) {
-           for (int j = 0; j < dp[0].length; j++) {
-               dp[i][j] = -1;
-           }
-       }
-        System.out.println(solve(arr, 0, target, 0, dp));
+        System.out.println(solve(arr, 0, 282, 0, dp));
     }
-    
-    static boolean solve(int[] arr,int idx,int target,int sum,int[][]  dp)
-    {        if(target%2!=0)
-        {
-            return false;
-        }
+    public static boolean solve(int[] arr,int idx,int target,int sum,int[][]  dp)
+    {
         if(idx==arr.length)
         {
-            if(sum==target/2)
+            if(sum==target)
             {
                 return true;
             }
@@ -53,9 +45,6 @@ public class equal_sum {
         {
             dp[idx][sum] = 0;
         }
-    
-        
         return ans1|ans2;
     }
 }
-

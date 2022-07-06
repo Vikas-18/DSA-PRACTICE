@@ -1,3 +1,4 @@
+package twoD_DP;
 public class min_path_sum {
     public static void main(String[] args) {
         int[][] arr = {{1,3,1},{1,5,1},{4,2,1}};
