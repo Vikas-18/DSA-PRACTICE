@@ -10,7 +10,6 @@ public class customclasses {
         }
     }
     public static void main(String[] args) {
-        
        ArrayList<Pair> arr = new ArrayList<>();
        arr.add(new Pair(1, 3));
        arr.add(new Pair(2, 2));
