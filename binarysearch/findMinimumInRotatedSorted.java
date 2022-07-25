@@ -1,4 +1,5 @@
 public class findMinimumInRotatedSorted {
+    //remember one thing that min element will be found in unsorted arr so try to go to unsorted side.
     public static void main(String[] args) {
         int[] nums = {4,6,7,8,9,1,2};
         System.out.println(findMin(nums));
