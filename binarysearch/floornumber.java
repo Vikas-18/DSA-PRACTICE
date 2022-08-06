@@ -1,8 +1,8 @@
 public class floornumber {
     
     public static void main(String[] args) {
-        int[] arr ={1,2,3,4,7,12,14,17};
-        System.out.println(floor(arr, 18));
+        int[] arr ={2,10,5,4,8};
+        System.out.println(floor(arr, 3));
     }
 
     public static int floor(int[] nums , int k)
@@ -16,7 +16,7 @@ public class floornumber {
             
             if(nums[mid]==k)
             {
-                return nums[mid];
+                return mid;
             }
             
             else if(nums[mid]>k)
