@@ -7,13 +7,13 @@ public class mathswork {
         int[]ans = new int[maxes.length];
         for (int i = 0; i < maxes.length; i++) {
             int counter=0;
-            counter = ceil(nums, maxes[i]);
+            counter = floor(nums, maxes[i]);
             ans[i] = counter;
         }
         System.out.println(Arrays.toString(ans));
     }
 
-    public static int ceil(int[]nums,int target)
+    public static int floor(int[]nums,int target)
     {
         int s= 0;
         int e = nums.length-1;

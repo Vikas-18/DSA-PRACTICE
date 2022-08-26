@@ -1,7 +1,10 @@
+import java.util.Arrays;
+
 public class floornumber {
     
     public static void main(String[] args) {
         int[] arr ={2,10,5,4,8};
+        Arrays.sort(arr);
         System.out.println(floor(arr, 3));
     }
 
