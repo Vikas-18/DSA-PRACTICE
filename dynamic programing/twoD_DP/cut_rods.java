@@ -9,7 +9,7 @@ public class cut_rods {
               dp[i][j] =-1;
            }
         }
-        System.out.println(cutRodUtil(price, n-1, n, dp));
+        System.out.println(cutRodUtil(price, 4, 5, dp));
     }
 
     static int cutRodUtil(int[] price, int ind, int N,int[][] dp){
@@ -29,5 +29,5 @@ public class cut_rods {
             taken = price[ind] + cutRodUtil(price,ind,N-rodLength,dp);
             
         return dp[ind][N] = Math.max(notTaken,taken);
-    }    
+    }
 }
