@@ -2,18 +2,27 @@
 public class customlinkedlist {
     public static void main(String[] args) {
         customlinkedlist ll1 = new customlinkedlist();
+        ll1.insertatfirst(3);
+        ll1.insertatfirst(2);
+        ll1.insertatfirst(1);
+        ll1.insertatfirst(0);
+        ll1.insertatfirst(5);
+        ll1.insertatlast(4);
+        ll1.print();
+        ll1.reverse();
+       
 
     }
 
     private Node head;
     private int size =0;
-    class Node{
-      private  int data;
-       private Node next;
+    class Node{//basic structure for LinkedList
+      private  int val;
+      private Node next;
 
-         Node(int data)
+         Node(int val)
        {
-        this.data = data;
+        this.val = val;
         this.next = null;
         
        }
@@ -21,9 +30,9 @@ public class customlinkedlist {
 
  
 
-    public void insert(int data)
+    public void insertatfirst(int val)
     { 
-       Node node = new Node(data);
+       Node node = new Node(val);
         if(head==null)
         {
             head = node;
@@ -35,18 +44,37 @@ public class customlinkedlist {
         head = node;
         size++;
     }
+    
+    public void insertatlast(int val)
+    {
+        Node node  = new Node(val);
+        if(head==null)
+        {
+            head = node;
+            head.next = null;
+            return;
+        }
+        Node temp  = head;
+        while(temp.next!=null)
+        {
+            temp = temp.next;
+        }
 
+        temp.next = node;
+        node.next = null;
+ 
+    }
     public void print()
     {
         Node temp = head;
         
         while(temp!=null)
         {
-            System.out.print(temp.data+"->");
+            System.out.print(temp.val+"->");
             
             temp = temp.next;
         }
-        System.out.println();
+        System.out.println("NULL");
     }
 //reverse a linked list
     public void reverse()
@@ -67,11 +95,11 @@ public class customlinkedlist {
         
         while(temp!=null)
         {
-          System.out.print(temp.data+"->");
+          System.out.print(temp.val+"->");
           
             temp = temp.next;
         }
-        System.out.println();
+        System.out.println("NULL");
     }
 //adjacent swap nodes, use recursion 
      public Node swapPairs(Node head) {
@@ -129,7 +157,7 @@ public Node addTwoNumbers(Node l1, Node l2) {
         int carry = 0;
         while(ll1!=null && ll2!=null)
         {
-            int sum = ll1.data + ll2 .data + carry;
+            int sum = ll1.val + ll2 .val + carry;
             int lastdigit = sum%10;
             dummy.next = new Node(lastdigit);
             carry = sum/10;
@@ -140,7 +168,7 @@ public Node addTwoNumbers(Node l1, Node l2) {
         
          while(ll1!=null)
         {
-            int sum = ll1.data  + carry;
+            int sum = ll1.val  + carry;
             int lastdigit = sum%10;
             dummy.next = new Node(lastdigit);
             carry = sum/10;
@@ -150,7 +178,7 @@ public Node addTwoNumbers(Node l1, Node l2) {
         
             while(ll2!=null)
         {
-            int sum = ll2.data  + carry;
+            int sum = ll2.val  + carry;
             int lastdigit = sum%10;
             dummy.next = new Node(lastdigit);
             carry = sum/10;
