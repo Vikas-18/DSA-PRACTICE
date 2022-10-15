@@ -12,6 +12,7 @@
     "slidingWindow",
     "priority_Queue",
     "GraphTheory",
-    "arrays"
+    "arrays",
+    "queue"
   ]
 }
