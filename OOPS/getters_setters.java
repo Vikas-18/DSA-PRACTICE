@@ -9,9 +9,10 @@ class Bank{
     private String password;//private access modifers only accessiable to class the only
 
     //getters
+    //can access the private members outside of the class by using getters and setrers
     public String getpassword()
     {
-       return  this.password;
+       return password;
     }
 
     //setters

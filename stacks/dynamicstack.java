@@ -4,15 +4,12 @@ public class dynamicstack {
         st.push(3);
         st.push(6);
         st.push(7);
-        st.push(8);
-        st.push(5);
-        st.push(5);
+    
         System.out.println(st.pop());
         System.out.println(st.pop());
         System.out.println(st.pop());
         System.out.println(st.pop());
-        System.out.println(st.pop());
-        System.out.println(st.pop());
+        
         
       
         
@@ -20,25 +17,36 @@ public class dynamicstack {
     }
    
     public int[] arr;
-    public int size = 5;
-    public int ptr = -1;
+    public int DEFAULT_SIZE = 5;
+    public int ptr = 0;
     dynamicstack()
     {
-        this.arr = new int[size];
-
+        this.arr = new int[DEFAULT_SIZE];
     }
     public void push(int data)
     {
-        if(ptr==arr.length)
-        {
-            this.arr = new int[10];
-        }
-
-        ptr++;
-        arr[ptr] = data;
-        return;
+       if(isFull())
+       {
+         resize();
+         arr[ptr] = data; 
+         ptr++;
+         return;
+       }
+       arr[ptr] = data; 
+       ptr++;
     }
 
+    private void resize() {
+        int[] temp = new int[arr.length * 2];
+        for (int i = 0; i < arr.length; i++) {
+            temp[i] = arr[i];
+        }
+        arr = temp;
+    }
+    private boolean isFull() {
+
+        return ptr==arr.length;
+    }
     public int pop() throws Exception
     {
         if(ptr==-1)
@@ -46,9 +54,10 @@ public class dynamicstack {
             throw new Exception("Stack is Empty");
         }
 
-       int removed = arr[ptr];
-       ptr--;
-       return removed;
+        ptr--;
+      
+        return arr[ptr];
+
     }
 
 
