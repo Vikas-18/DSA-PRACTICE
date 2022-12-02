@@ -9,7 +9,7 @@ public class MCM {
 
     public static int solve(int[]arr,int i,int j,int[][]dp)
     {
-        if(i==j)
+        if(i>=j)
         {
             return 0;
         }
