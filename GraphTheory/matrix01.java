@@ -14,60 +14,63 @@ public class matrix01 {
         }
     }
 
+    public static class Triplet
+    {
+        int f;
+        int s;
+        int t;
+        Triplet(int f,int s,int t)
+        {
+            this.f = f;
+            this.s = s;
+            this.t = t;
+
+        }
+
+    }
     public static int[][] updateMatrix(int[][] mat) {
-        int[][]arr = mat;
-        int n = arr.length;
-        int m = arr[0].length;
-        boolean[][]vis = new boolean[n][m];
-        Queue<Info> q = new LinkedList<>();
-        
+        int n = mat.length;
+        int m = mat[0].length; 
+        Queue<Triplet> q = new LinkedList<>();
+        int[][]vis = new int[n][m];
+        int[][]ans = new int[n][m];
+
         for(int i=0; i<n; i++)
         {
-           for(int j=0; j<m; j++)
-           {
-              if(arr[i][j]==0)
-              {
-                  q.add(new Info(i,j,0));
-                  vis[i][j]=true;
-              }
-           }
-        }
-        
-        while(!q.isEmpty())
-        {
-            int row = q.peek().first;
-            int col = q.peek().second;
-            int step = q.peek().third;
-            q.remove();
-            arr[row][col] = step;
-            int[] delrow = {-1,1,0,0};
-            int[] delcol = {0,0,-1,1};
-            
-            for(int i=0; i<4; i++)
+            for(int j=0; j<m; j++)
             {
-                int nrow = row + delrow[i];
-                int ncol = col + delcol[i];
-                if(nrow>=0 && nrow<n && ncol>=0 && ncol<m && vis[nrow][ncol]==false)
+                if(mat[i][j]==0)
                 {
-                    vis[nrow][nrow]=true;
-                    q.add(new Info(nrow,ncol,step+1));
+                    q.add(new Triplet(i,j,0));
+                    ans[i][j] = 0;
+                    vis[i][j] =1;
                 }
-                
             }
         }
-        return arr;
-    }
-    
-    public static class Info{
-        int first = 0;
-        int second = 0;
-        int third = 0;
-        
-        Info(int first, int second,int third)
+
+        int[]drow = {1,-1,0,0};
+        int[]dcol = {0,0,1,-1};
+
+        while(q.size()>0)
         {
-          this.first = first;
-            this.second = second;
-            this.third = third;
+            int row = q.peek().f;
+            int col = q.peek().s;
+            int dis = q.peek().t;
+            ans[row][col] = dis;
+            q.remove();
+
+            for(int i=0; i<4; i++)
+            {
+                int delrow = row + drow[i];
+                int delcol = col + dcol[i];
+
+                if(delrow>=0 && delrow<n && delcol>=0 && delcol<m && vis[delrow][delcol]==0)
+                {
+                    q.add(new Triplet(delrow,delcol,dis+1));
+                    vis[delrow][delcol]=1;
+                }
+            }
         }
+        return ans;
     }
 }
