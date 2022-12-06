@@ -1,5 +1,5 @@
 
-import java.util.*;
+import java.util.ArrayList;
 public class dnfsort {
     public static void main(String[] args) {
         ArrayList<Integer> a = new ArrayList<>();

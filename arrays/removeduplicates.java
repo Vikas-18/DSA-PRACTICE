@@ -1,5 +1,6 @@
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
 public class removeduplicates {
     public static void main(String[] args) {
         ArrayList<Integer> arr  = new ArrayList<>();

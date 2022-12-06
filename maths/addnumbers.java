@@ -1,4 +1,5 @@
-import java.util.*;
+import java.util.Arrays;
+import java.util.ArrayList;
 public class addnumbers {
     public static void main(String[] args) {
         int[] A = {4, 3, 6, 7, 9, 9, 1, 7, 8};
@@ -8,7 +9,7 @@ public class addnumbers {
     }
     static int[] addArrays(int[] A, int[] B) {
 
-        List<Integer> ans = new ArrayList<Integer>();
+        ArrayList<Integer> ans = new ArrayList<Integer>();
 
         int i=A.length-1;
         int j=B.length-1;

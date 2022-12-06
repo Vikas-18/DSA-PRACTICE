@@ -1,7 +1,7 @@
 /**
  * baseball
  */
-import java.util.*;
+import java.util.ArrayList;
 public class baseball {
 
     public static void main(String[] args) {

@@ -1,19 +1,19 @@
 /**
  * permutations
  */
-import java.util.*;
+import java.util.ArrayList;
 public class permutations {
 
     public static void main(String[] args) {
         int[] arr = {1,1,2};
-        List<Integer> ans = new ArrayList<>();
+        ArrayList<Integer> ans = new ArrayList<>();
         boolean[] f = new boolean[arr.length];
-        List<List<Integer>> list = new ArrayList<>();
+        ArrayList<ArrayList<Integer>> list = new ArrayList<>();
         permute2(arr, f, ans,list);
         System.out.println(list);
     }
 
-    static void permute(int[] arr,boolean[] f,List<Integer> ans,List<List<Integer>> list)
+    static void permute(int[] arr,boolean[] f,ArrayList<Integer> ans,ArrayList<ArrayList<Integer>> list)
     {
         if(ans.size()==arr.length)
       list.add(new ArrayList<>(ans));
@@ -31,7 +31,7 @@ public class permutations {
             }
         }
     }
-    static void permute2(int[] arr,boolean[] f,List<Integer> ans,List<List<Integer>> list)
+    static void permute2(int[] arr,boolean[] f,ArrayList<Integer> ans,ArrayList<ArrayList<Integer>> list)
     {
         if(ans.size()==arr.length)
       list.add(new ArrayList<>(ans));

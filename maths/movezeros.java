@@ -1,7 +1,8 @@
 /**
  * movezeros
  */
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
 public class movezeros {
 
     public static void main(String[] args) {
@@ -10,7 +11,7 @@ public class movezeros {
     }
 
     static int[] solve(int[] A) {
-        List<Integer> arr = new ArrayList<>();
+        ArrayList<Integer> arr = new ArrayList<>();
         int counter=0;
         for(int i=0; i<A.length; i++)
         {

@@ -1,7 +1,7 @@
 /**
  * ratinamaze
  */
-import java.util.*;
+import java.util.ArrayList;
 public class ratinamaze {
 // {{1,0,0,1},
 // {1,1,1,0},
@@ -10,8 +10,8 @@ public class ratinamaze {
         int[][] maze={{1,1,0,1},
         {1,1,1,0},
         {1,1,1,1}};
-        List<String> list = new ArrayList<>();
-        List<List<String>> ans = new ArrayList<>();
+        ArrayList<String> list = new ArrayList<>();
+        ArrayList<ArrayList<String>> ans = new ArrayList<>();
         boolean[][] visited = new boolean[maze.length][maze[0].length];
         ways(maze, 0, 0,list,ans,visited);
        
@@ -20,7 +20,7 @@ public class ratinamaze {
 
     }
 
-    static void ways(int[][] maze,int n,int m ,List<String> list,List<List<String>> ans,boolean[][] visited)
+    static void ways(int[][] maze,int n,int m ,ArrayList<String> list,ArrayList<ArrayList<String>> ans,boolean[][] visited)
     {
 
         if(n==maze.length-1 && m==maze[0].length-1)

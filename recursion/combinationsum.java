@@ -1,7 +1,7 @@
 /**
  * combinationsum
  */
-import java.util.*;
+import java.util.ArrayList;
 public class combinationsum {
 
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.ArrayList;
 public class customclasses {
     public static class Pair{
         int val;

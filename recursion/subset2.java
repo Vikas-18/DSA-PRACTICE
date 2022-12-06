@@ -1,5 +1,5 @@
 
-import java.util.*;
+import java.util.ArrayList;
 public class subset2 {
     public static void main(String[] args) {
         ArrayList<ArrayList<Integer>> ans = new ArrayList<>();
