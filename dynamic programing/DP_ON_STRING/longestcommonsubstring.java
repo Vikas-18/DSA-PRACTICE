@@ -8,7 +8,7 @@ public class longestcommonsubstring {
     public static int solve2(String s1,String s2)
     {
         int n=s1.length();
-    int m=s2.length();
+        int m=s2.length();
 
     int dp[][]=new int[n+1][m+1];
     for(int i=0; i<n; i++)

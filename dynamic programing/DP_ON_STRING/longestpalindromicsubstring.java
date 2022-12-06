@@ -11,12 +11,8 @@ public class longestpalindromicsubstring {
         for (int i = s.length()-1; i >= 0; i--) {
             s2 += s.charAt(i);
         }
-        System.out.println(solve2(s1, s2));
-    }
-    public static int solve2(String s1,String s2)
-    {
         int n=s1.length();
-    int m=s2.length();
+        int m=s2.length();
 
     int dp[][]=new int[n+1][m+1];
     for(int i=0; i<n; i++)
@@ -47,7 +43,38 @@ public class longestpalindromicsubstring {
             
         }
     }
-    
-    return ans;
+
+    String res = "";
+    int temp =0;
+    int row = 0;
+    int col=0;
+    for (int i = dp.length-1; i>=0; i--) {
+        for (int j =dp[0].length -1; j >=0; j--) 
+        {
+           if(temp<dp[i][j])
+           {
+            temp = dp[i][j];
+            row = i;
+            col = j;
+           }
+        }
+        
     }
+    for (int i = 0; i < dp.length; i++) {
+        for (int j = 0; j < dp[0].length; j++) {
+            System.out.print(dp[i][j]);
+        }
+        System.out.println();
+    }
+    while(row>0 && col>0)
+    {
+        if(dp[row][col]!=0)
+        res+=s.charAt(row-1);
+        row--;
+        col--;
+    }
+  System.out.println(res);
+    
+
+ }
 }
