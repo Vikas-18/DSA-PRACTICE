@@ -36,7 +36,7 @@ public class sortcharcterbyfrq {
     PriorityQueue<Pair> pq = new PriorityQueue<>();
         
         for (Map.Entry<Character, Integer> m : map.entrySet()) {
-            
+            if(m.getKey()=='a')
             pq.add(new Pair(m.getKey(), m.getValue()));
             
         }
