@@ -9,6 +9,7 @@ public class combinationsum {
         ArrayList<Integer> ans = new ArrayList<>();
         csum(0, arr, 3, 0, ans);
         System.out.println(list);
+        System.out.println((int)('1'));
     }
 public static ArrayList<ArrayList<Integer>> list = new ArrayList<>();
 
