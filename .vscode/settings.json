@@ -3,16 +3,18 @@
     "string-DS",
     "stacks",
     "sorting",
+    "slidingWindow",
     "recursion",
+    "queue",
+    "priority_Queue",
     "maths",
     "linkedlist",
-    "binarysearch",
-    "OOPS",
     "dynamic programing",
-    "slidingWindow",
-    "priority_Queue",
-    "GraphTheory",
+    "binarysearch",
     "arrays",
-    "queue"
-  ]
+    "OOPS",
+    "GraphTheory",
+    "binarytrees"
+  ],
+  "java.debug.settings.onBuildFailureProceed": true
 }
