@@ -178,6 +178,26 @@ public class buildtree {
 
 
     }
+    public static Node lowestCommonAncestor2(Node root, Node p, Node q) {
+        if(root==null || root.data==p.data || root.data==q.data)
+        {
+            return root;
+        }
+
+        Node rightLca = lowestCommonAncestor2(root.right,p,q);
+        Node leftLca = lowestCommonAncestor2(root.left,p,q);
+
+        if(rightLca==null)
+        {
+            return leftLca;
+        }
+        if(leftLca==null)
+        {
+            return rightLca;
+        }
+        return root;
+        
+    }
     public static void main(String[] args) {
         /*
         *    1
