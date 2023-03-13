@@ -12,6 +12,22 @@ public class binarySearchTree {
             this.right = null;
         }
     }
+     public Node sortedArrayToBST(int[] nums) {
+        return build(nums,0,nums.length-1);
+    }
+    public Node build(int[]nums, int s , int e)
+    {
+        if(s>e)
+        {
+            return null;
+        }
+        int mid = (s + e)/2;
+
+        Node root = new Node(nums[mid]);
+        root.left = build(nums,s,mid-1);
+        root.right = build(nums,mid+1,e);
+        return root;
+    }
     public static Node build(Node root,int val)
     {
         if(root==null)
@@ -62,6 +78,28 @@ public class binarySearchTree {
        }
  
         return right|left;
+    }
+
+    public boolean isValidBST(Node root) {
+        return isValid(root,null,null);
+    }
+    public boolean isValid(Node root,Node min,Node max)
+    {
+        if(root==null)
+        {
+            return true;
+        }
+        
+        if(min!=null && root.val<=min.val)
+        {
+            return false;
+        }
+        if(max!=null && root.val>=max.val)
+        {
+            return false;
+        }
+
+        return isValid(root.left,min,root) & isValid(root.right,root,max);
     }
 
     public static void main(String[] args) {
