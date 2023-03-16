@@ -125,6 +125,21 @@ public class buildtree {
             System.out.print(map.get(i).data + " ");
         }
     }
+    public ArrayList<Integer> ans = new ArrayList<>();
+    public void solveforRightView(Node root,int lvl)
+    {
+        if(root==null)
+        {
+            return;
+        }
+        if(lvl==ans.size())
+        {
+            ans.add(root.data);
+        }
+
+        solveforRightView(root.right,lvl+1);
+        solveforRightView(root.left,lvl+1);
+    }
 
     public static Node lowestCommonAncestor(Node root, Node p, Node q) {
         ArrayList<Node> path1 = new ArrayList<>();
