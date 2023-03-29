@@ -3,8 +3,37 @@ package cyclicsort;
 public class missingpositive {
     public static void main(String[] args) {
         int[] nums = {3,4,-1,1};
-        System.out.println(firstMissingPositive2(nums));
+        System.out.println(firstMissingPositive3(nums));
     }
+    public static int firstMissingPositive3(int[] nums) {
+        int idx =0;
+        while(idx<nums.length)
+        {
+            int correctidx = nums[idx]-1;
+            if(correctidx>=0 && correctidx<nums.length && nums[idx]!=nums[correctidx])
+            {
+                swap(nums,idx,correctidx);
+            }
+            else
+            {
+                idx++;
+            }
+        }
+        for(int i=0; i<nums.length; i++)
+        {
+            if(nums[i]!=i+1)
+            {
+                return i+1;
+            }
+        }
+        return nums.length+1;
+    }
+    // public static void swap(int[]nums,int i,int j)
+    // {
+    //     int temp = nums[i];
+    //     nums[i] = nums[j];
+    //     nums[j] = temp;
+    // }
       static int firstMissingPositive(int[] nums) {
            int i=0;
         while(i<nums.length)
