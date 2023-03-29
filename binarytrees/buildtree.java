@@ -54,20 +54,20 @@ public class buildtree {
         }
         Queue<Node> q = new LinkedList<>();
         q.add(root);
-        q.add(null);
+        // q.add(null);
 
         while (!q.isEmpty()) {
             Node currNode = q.remove();
             if(currNode==null)
             {
                 System.out.println();
-                if(q.isEmpty())
-                {
-                    break;
-                }
-                else{
-                    q.add(null);
-                }
+                // if(q.isEmpty())
+                // {
+                //     break;
+                // }
+                // else{
+                //     q.add(null);
+                // }
             }
             else{
                 System.out.print(currNode.data);
@@ -225,9 +225,9 @@ public class buildtree {
         Node root = buildTree(arr);
         // System.out.println(root.data);
         // preOrder(root);
-        // levelOrder(root);
+        levelOrder(root);
         // topView(root);
-       Node ans =  lowestCommonAncestor(root, root.left.left, root.right.right);
-       System.out.println(ans.data);
+    //    Node ans =  lowestCommonAncestor(root, root.left.left, root.right.right);
+    //    System.out.println(ans.data);
     }
 }
