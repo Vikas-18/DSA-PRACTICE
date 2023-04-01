@@ -7,11 +7,13 @@ public class ratinamaze {
 // {1,1,1,0},
 // {1,1,1,1}}
     public static void main(String[] args) {
-        int[][] maze={{1,-1,1},
+        int[][] maze={{1,1,1},
                       {1,1,1},
                       {1,1,1}};
         boolean[][] vis = new boolean[maze.length][maze[0].length];
-        System.out.print(waysCount(maze, 0, 0, vis));
+        ArrayList<String> ans = new ArrayList<>();
+        printPath(maze, 0, 0, vis, ans);
+        System.out.println(waysCount(maze, 0, 0, vis));;
 
         // ArrayList<String> list = new ArrayList<>();
         // ArrayList<ArrayList<String>> ans = new ArrayList<>();
@@ -82,7 +84,7 @@ public class ratinamaze {
         {
            vis[r][c] = true;
            ans.add("U");
-           waysCount(arr, r-1, c,vis);
+           printPath(arr, r-1, c, vis, ans);
            ans.remove(ans.size()-1);
            vis[r][c] = false;
         }
@@ -90,7 +92,7 @@ public class ratinamaze {
         {
             vis[r][c] = true;
             ans.add("D");
-           waysCount(arr, r+1, c,vis);
+            printPath(arr, r+1, c, vis, ans);
            ans.remove(ans.size()-1);
             vis[r][c] = false;
         }
@@ -99,7 +101,7 @@ public class ratinamaze {
         {
             vis[r][c] = true;
             ans.add("L");
-           waysCount(arr, r, c-1,vis);
+            printPath(arr, r, c-1, vis, ans);
            ans.remove(ans.size()-1);
             vis[r][c] = false;
         }
@@ -108,7 +110,7 @@ public class ratinamaze {
         {
            vis[r][c] = true;
            ans.add("R");
-           waysCount(arr, r, c+1,vis);
+           printPath(arr, r, c+1, vis, ans);
            ans.remove(ans.size()-1);
            vis[r][c] = false;
         }
