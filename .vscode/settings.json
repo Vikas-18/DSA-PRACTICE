@@ -10,11 +10,12 @@
     "maths",
     "linkedlist",
     "dynamic programing",
+    "binarytrees",
     "binarysearch",
     "arrays",
     "OOPS",
     "GraphTheory",
-    "binarytrees"
+    "2pointer"
   ],
   "java.debug.settings.onBuildFailureProceed": true
 }

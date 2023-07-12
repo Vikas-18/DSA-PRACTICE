@@ -2,7 +2,8 @@ import java.util.Arrays;
 
 public class boatsNeeded {
     public static void main(String[] args) {
-
+        int[]people = {1,2,3,4,5,6};
+             System.out.println(numRescueBoats(people, 8));
     }
 
     public static int numRescueBoats(int[] people, int limit) {
