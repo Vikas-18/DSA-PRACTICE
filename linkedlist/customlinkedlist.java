@@ -10,7 +10,6 @@ public class customlinkedlist {
         ll1.insertatlast(4);
         ll1.print();
         ll1.reverse();
-       
 
     }
 
@@ -20,7 +19,7 @@ public class customlinkedlist {
       private  int val;
       private Node next;
 
-         Node(int val)
+        Node(int val)
        {
         this.val = val;
         this.next = null;
