@@ -28,28 +28,7 @@ public class dboi {
             }
         }
         System.out.println(ans);
-        System.out.println(solve(arr, 5));
+
     }
 
-    public static int solve(int[] arr, int N) {
-        Arrays.sort(arr);
-
-        int left = 0;
-        int right = N - 1;
-        int pairs = 0;
-
-        while (left < right) {
-            if (arr[left] + arr[right] == arr[left + 1] + arr[right - 1]) {
-                pairs++;
-                left++;
-                right--;
-            } else if (arr[left] + arr[right] < arr[left + 1] + arr[right - 1]) {
-                left++;
-            } else {
-                right--;
-            }
-        }
-
-        return pairs;
-    }
 }
