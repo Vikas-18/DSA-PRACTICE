@@ -15,7 +15,8 @@
     "arrays",
     "OOPS",
     "GraphTheory",
-    "2pointer"
+    "2pointer",
+    "patterns.java"
   ],
   "java.debug.settings.onBuildFailureProceed": true
 }
