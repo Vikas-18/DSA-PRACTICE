@@ -1,12 +1,12 @@
 {
   "java.project.sourcePaths": [
-    "string-DS",
     "stacks",
     "sorting",
     "slidingWindow",
     "recursion",
     "queue",
     "priority_Queue",
+    "patterns.java",
     "maths",
     "linkedlist",
     "dynamic programing",
@@ -16,7 +16,7 @@
     "OOPS",
     "GraphTheory",
     "2pointer",
-    "patterns.java"
+    "string-DS"
   ],
   "java.debug.settings.onBuildFailureProceed": true
 }
