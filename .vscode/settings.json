@@ -1,5 +1,6 @@
 {
   "java.project.sourcePaths": [
+    "strings",
     "stacks",
     "sorting",
     "slidingWindow",
@@ -16,7 +17,7 @@
     "OOPS",
     "GraphTheory",
     "2pointer",
-    "string-DS"
+    "bit manipulation"
   ],
   "java.debug.settings.onBuildFailureProceed": true
 }
