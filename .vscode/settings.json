@@ -11,13 +11,14 @@
     "maths",
     "linkedlist",
     "dynamic programing",
+    "bit manipulation",
     "binarytrees",
     "binarysearch",
     "arrays",
     "OOPS",
     "GraphTheory",
     "2pointer",
-    "bit manipulation"
+    "codeforces"
   ],
   "java.debug.settings.onBuildFailureProceed": true
 }

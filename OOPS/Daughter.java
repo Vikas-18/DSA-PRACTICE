@@ -6,4 +6,9 @@ public class Daughter extends AbstractClasses {
     public void love() {
         System.out.println("i love kohli");
     }
+
+    @Override
+    public int careerctc(int salary) {
+        return salary / 12;
+    }
 }
