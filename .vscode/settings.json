@@ -11,6 +11,7 @@
     "maths",
     "linkedlist",
     "dynamic programing",
+    "codeforces",
     "bit manipulation",
     "binarytrees",
     "binarysearch",
@@ -18,7 +19,7 @@
     "OOPS",
     "GraphTheory",
     "2pointer",
-    "codeforces"
+    "rangeQueries"
   ],
   "java.debug.settings.onBuildFailureProceed": true
 }
