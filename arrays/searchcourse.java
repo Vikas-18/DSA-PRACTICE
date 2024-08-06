@@ -8,6 +8,7 @@ public class searchcourse {
         int n = sc.nextInt();
         if (n <= 0 || n > 20) {
             System.out.println("Invalid Range");
+            sc.close();
             return;
         }
 
@@ -32,6 +33,6 @@ public class searchcourse {
         } else {
             System.out.println(search + " course is not available");
         }
-
+        sc.close();
     }
 }

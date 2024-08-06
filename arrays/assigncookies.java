@@ -1,5 +1,4 @@
 import java.util.Arrays;
-import java.util.HashMap;
 
 public class assigncookies {
     public static void main(String[] args) {
@@ -12,7 +11,7 @@ public class assigncookies {
         int ans = 0;
         Arrays.sort(g);
         Arrays.sort(s);
-        HashMap<Integer, Integer> map = new HashMap<>();
+        // HashMap<Integer, Integer> map = new HashMap<>();
 
         // for(int i=0; i<s.length; i++)
         // {

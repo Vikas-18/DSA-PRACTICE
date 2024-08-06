@@ -8,7 +8,7 @@ public class magneticforce {
 
     public static int maxDistance(int[] arr, int m) {
         Arrays.sort(arr);
-        int n = arr.length;
+
         int s = 1;
         int e = (int) (1e9);
         int ans = 0;

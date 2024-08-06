@@ -13,8 +13,6 @@ public class maximum_profit {
 
     public static int jobScheduling(int[] startTime, int[] endTime, int[] profit) {
 
-        int ans = 0;
-
         ArrayList<Triplet> list = new ArrayList<>();
 
         for (int i = 0; i < startTime.length; i++) {
